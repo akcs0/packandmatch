@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Donate Now
+{% endblock %}
+
+{% block head %}
+
+<style>
+    body {
+        text-align:center;
+        background-image: url("/static/login3.jpg");
+        background-color: #EAE9E7;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        opacity: 0.9;
+    }
+</style>
+
+{% endblock %}
+
+{% block main %}
+
+<!--Table template to display form submissions-->
+<link href="/static/styles.css" rel="stylesheet">
+<h1>Inventory and Donations</h1>
+<br>
+<p>Displayed below is your initial inventory, the information of the top shelters we recommend you donate to, as well as the number of items in each food category to give to each shelter. This page also displays your final inventory after making these recommended donations. The top 3 shelters (or all shelters if fewer than 3 requests) are determined by ranking all requests based on distance and the number of item matches associated with each request. We allocated the maximum number of possible donations to each shelter in order of their ranking.</p>
+<br>
+
+<div class="card text-center" style="border:2px rgb(225, 225, 225); border-radius:7px;">
+    <h4 class="card-header">HUDS Initial Inventory</h4>
+    <div class="card-body">
+        <table class="table">
+
+            <!--Table header with column labels-->
+            <thead>
+                <tr>
+                    <th scope="col">Soup</th>
+                    <th scope="col">Salad</th>
+                    <th scope="col">Sandwich</th>
+                    <th scope="col">Entree</th>
+                    <th scope="col">Side</th>
+                    <th scope="col">Dessert</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            <!--For each food item, display HUDS' initial inventory -->
+                {% for i in range(huds_initial|length) %}
+                    <td>{{huds_initial[i]}}</td>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<br><br>
+
+<div class="card text-center" style="border:2px rgb(225, 225, 225); border-radius:7px;">
+    <h4 class="card-header">Shelters and Donations</h4>
+    <div class="card-body">
+        <table class="table">
+
+            <!--Table header with column labels-->
+            <thead>
+                <tr>
+                    <th scope="col">Shelter Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Soup</th>
+                    <th scope="col">Salad</th>
+                    <th scope="col">Sandwich</th>
+                    <th scope="col">Entree</th>
+                    <th scope="col">Side</th>
+                    <th scope="col">Dessert</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            <!--For each shelter, display name, address, and donations of each item-->
+            {% for id in shelters_chosen %}
+                <tr>
+                    {% for info in range(shelter_names_addresses[id]|length) %}
+                        <td>{{shelter_names_addresses[id][info]}}</td>
+                    {% endfor %}
+
+                    {% for item in range(donated_rows[id]|length) %}
+                        <td>{{donated_rows[id][item]}}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<br><br>
+
+<div class="card text-center" style="border:2px rgb(225, 225, 225); border-radius:7px;">
+    <h4 class="card-header">HUDS Remaining Inventory</h4>
+    <div class="card-body">
+        <table class="table">
+
+            <!--Table header with column labels-->
+            <thead>
+                <tr>
+                    <th scope="col">Soup</th>
+                    <th scope="col">Salad</th>
+                    <th scope="col">Sandwich</th>
+                    <th scope="col">Entree</th>
+                    <th scope="col">Side</th>
+                    <th scope="col">Dessert</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            <!--For each food item, display HUDS' initial inventory -->
+                {% for i in range(huds_list|length) %}
+                    <td>{{huds_list[i]}}</td>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<br><br>
+
+<a href="/huds" class="btn btn-outline-secondary" style="text-align: center;"><i class="fas fa-long-arrow-alt-left"></i></a>
+<a href="/deliver" class="btn btn-outline-secondary">Deliver</a>
+
+{% endblock %}

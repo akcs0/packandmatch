@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block head %}
+
+<style>
+    body {
+        text-align:center;
+        opacity: 0.9;
+        background-color: #EAE9E7;
+    }
+</style>
+
+{% endblock %}
+
+{% block main %}
+    <link href="/static/styles.css" rel="stylesheet">
+    <img alt="{{ top }}" class="border" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i.pinimg.com/originals/9f/99/73/9f99734f73f16705055f55b7d8720730.jpg" title="{{ top }}">
+{% endblock %}

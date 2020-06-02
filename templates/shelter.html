@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Shelter Home
+{% endblock %}
+
+{% block head %}
+
+<style>
+    body {
+        background-image: url("/static/login3.jpg");
+        background-color: #EAE9E7;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        opacity: 0.9;
+    }
+</style>
+
+{% endblock %}
+
+{% block main %}
+
+    <link href="/static/styles.css" rel="stylesheet">
+    <div class="card text-center" style="border:2px rgb(225, 225, 225); border-radius:7px;">
+        <h4 class="card-header">Welcome, Shelters!</h4>
+        <div class="card-body">
+            <p class="card-text">Add a request for any future day! You cannot add a request for today.</p>
+            <a href="/requestform" class="btn btn-outline-secondary">Add Request</a>
+        </div>
+    </div>
+    <br>
+
+    <div class="card text-center" style="border:2px rgb(225, 225, 225); border-radius:7px;">
+        <h4 class="card-header">Thank you for requesting!</h4>
+        <div class="card-body">
+            <p class="card-text">View all of your requests ever made for any date.</p>
+            <a href="/viewrequests" class="btn btn-outline-secondary">View Requests</a>
+        </div>
+    </div>
+
+{% endblock %}

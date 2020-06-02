@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Text styles */
+    text-align: center;
+    color: white;
+
+    /* Background styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("annenberg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    /* Text styles */
+    font-size: 5em;
+
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+/*.hero .btn {*/
+    /* Positioning and sizing */
+/*    display: block;*/
+/*    width: 200px;*/
+
+    /* Padding and margins */
+/*    padding: 0.5em;*/
+/*    margin-top: 50px;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+
+    /* Text styles */
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*    font-size: 1.5em;*/
+
+    /* Border styles */
+/*    border: 0px solid white;*/
+/*    border-radius: 20px;*/
+
+    /* Background styles */
+/*    background-color: rgba(225, 225, 225, 0.8);*/
+/*}*/
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: Grey;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+main .form-control
+{
+     center form controls
+    display: inline-block;
+
+     override Bootstrap's 100% width for form controls
+    width: auto;
+}
+
+main
+{
+     scroll horizontally as needed
+    overflow-x: auto;
+
+     center contents
+    text-align: center;
+}
+
+main img
+{
+     constrain images on small screens
+    max-width: 100%;
+}
+
+body {
+    background-color: #F0F4F7;
+    font-family: 'Avenir', 'Arial Black', sans-serif;
+}

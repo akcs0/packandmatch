@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Deliver
+{% endblock %}
+
+{% block head %}
+
+<style>
+    body {
+        text-align:center;
+        background-image: url("/static/login3.jpg");
+        background-color: #EAE9E7;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        opacity: 0.9;
+    }
+</style>
+
+{% endblock %}
+
+{% block main %}
+    <link href="/static/styles.css" rel="stylesheet">
+    <p>
+        Thank you for donating!
+    </p>
+    <br>
+    <a href="/donationform" class="btn btn-outline-secondary">Start Another Donation</a>
+
+{% endblock %}

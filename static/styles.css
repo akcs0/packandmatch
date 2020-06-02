@@ -1,0 +1,48 @@
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: Grey;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+main .form-control
+{
+     /*center form controls*/
+    display: inline-block;
+
+     /*override Bootstrap's 100% width for form controls*/
+    width: auto;
+}
+
+main
+{
+    /*scroll horizontally as needed*/
+    overflow-x: auto;
+
+    /*center contents*/
+    text-align: center;
+}
+
+main img
+{
+    /*constrain images on small screens*/
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Avenir', 'Arial Black', sans-serif;
+}

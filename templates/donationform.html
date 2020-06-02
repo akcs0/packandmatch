@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Donation Form
+{% endblock %}
+
+{% block distinguish %}
+HUDS
+{% endblock %}
+
+{% block head %}
+
+<style>
+    body {
+        background-image: url("/static/login3.jpg");
+        background-color: #EAE9E7;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        opacity: 0.9;
+    }
+</style>
+
+{% endblock %}
+
+{% block main %}
+<link href="/static/styles.css" rel="stylesheet">
+
+<div class="card mx-auto" style="max-width:30rem; border-radius:7px;">
+    <h4 class="card-header text-center">Donation Form</h4>
+    <div class="card-body">
+        <p class="card-text"> Please add the amount of food you plan to donate throughout the day!</p>
+        <form action="/donationform" method="post">
+            <div class="form-group">
+                <label>Soup: </label>
+                <p><input autofocus class="form-control"name="soup" placeholder="Soup Servings" type="number" min="0" required></p>
+            </div>
+            <div class="form-group">
+                <label>Salad: </label>
+                <p><input class="form-control" name="salad" placeholder="Salad Servings" type="number" min="0" required></p>
+            </div>
+            <div class="form-group">
+                <label>Sandwich: </label>
+                <p><input class="form-control" name="sandwich" placeholder="Sandwich Servings" type="number" min="0" required></p>
+            </div>
+            <div class="form-group">
+                <label>Entree: </label>
+                <p><input class="form-control" name="entree" placeholder="Entree Servings" type="number" min="0" required></p>
+            </div>
+            <div class="form-group">
+                <label>Side Dish: </label>
+                <p><input class="form-control" name="side" placeholder="Sides Servings" type="number" min="0" required></p>
+            </div>
+            <div class="form-group">
+                <label>Dessert: </label>
+                <p><input class="form-control" name="dessert" placeholder="Dessert Servings" type="number" min="0" required></p>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-outline-secondary" type="submit" style="display: block; margin: 0 auto;">Add to Donations</button>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<center>
+    <div>
+        <a href="/huds" class="btn btn-outline-secondary" style="text-align: center;"><i class="fas fa-long-arrow-alt-left"></i></a>
+    </div>
+</center>
+{% endblock %}

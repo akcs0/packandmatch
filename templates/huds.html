@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    HUDS Home
+{% endblock %}
+
+{% block distinguish %}
+HUDS
+{% endblock %}
+
+{% block head %}
+
+<style>
+    body {
+        text-align:center;
+        background-image: url("/static/login3.jpg");
+        background-color: #EAE9E7;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        opacity: 0.9;
+    }
+</style>
+
+{% endblock %}
+
+{% block main %}
+
+<link href="/static/styles.css" rel="stylesheet">
+
+<div class="card text-center" style="border:2px rgb(225, 225, 225); border-radius:7px;">
+    <h4 class="card-header">Welcome Harvard University Dining Services!</h4>
+    <div class="card-body">
+        <h5 class="card-title">Input Food Donations Throughout the Day:</h5>
+        <p class="card-text">When ready, add the amount of food donations after each meal through this form!</p>
+        <a href="/donationform" class="btn btn-outline-secondary">Add Donation</a>
+    </div>
+</div>
+<br>
+<div class="card text-center" style="border-radius:7px;">
+    <div class="card-body">
+        <h5 class="card-title">Ready to Donate the Day's Food?</h5>
+        <p class="card-text">At the end of the day, click the button to submit the food donations for the entire day. You may deliver all current donations at most once per day.</p>
+        <a href="/donatenow" class="btn btn-outline-secondary">Donate Now</a>
+    </div>
+</div>
+
+{% endblock %}

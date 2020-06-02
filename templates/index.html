@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main
+{% endblock %}
+
+{% block body %}
+
+    <link href="/static/hero.css" rel="stylesheet">
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>Pack&Match</h1>
+            <h3>Sharing Food</h3>
+            <h3>Spreading Goodness</h3>
+        </div>
+    </section>
+{% endblock %}
+
+{% block main %}
+
+    <link href="/static/style.css" rel="stylesheet">
+    <section style="text-align: center;">
+        <h1>
+            About Us
+        </h1>
+        <br>
+        <p>Pack&Match is a food management program that connects Harvard University Dining Services (HUDS) to local food shelters. In 2017, HUDS had over 30,700 meals worth of food leftover. While HUDS does currently donate these excess meals, their current methods do not allow for the shelters to request specific types of food that they need and for HUDS to indicate the specific types of food that they have leftover on a daily basis.</p>
+        <br>
+        <h5>Pack&Match addresses this.</h5>
+        <br>
+        <p>Our web application allows for shelters to make requests for specific food categories, as late as the day before they need the food. A custom built algorithm then ranks the shelters, taking into account the shelter’s specific requests and their distance away from HUDS. The top three shelters will then be “matched” to HUDS, who then donates that day’s extra food accordingly.</p>
+        <p>Through this unique web applications, both HUDS and local shelters can be assured that shelters are having their specific needs met.</p>
+        <p>Together, let's continue <strong>Sharing Food and Spreading Goodness</strong> throughout our communities.</p>
+        <br><br>
+        <h4>Watch this video to learn more about what we do and why we do it!</h4>
+        <br>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B-G6wZ24rY4" allowfullscreen></iframe>
+        </div>
+    </section>
+
+{% endblock %}
